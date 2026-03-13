@@ -70,7 +70,7 @@ fi
 # 2. Brew packages
 # --------------------------------------------------
 step "Installing CLI tools via Homebrew..."
-BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit yazi ffmpeg sevenzip jq poppler resvg imagemagick)
+BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit yazi ffmpeg sevenzip jq poppler resvg imagemagick fastfetch)
 
 for pkg in "${BREW_PACKAGES[@]}"; do
     if brew list "$pkg" &>/dev/null; then

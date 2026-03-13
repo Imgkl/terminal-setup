@@ -1,3 +1,6 @@
+# Suppress "Last login" message
+[ ! -f ~/.hushlogin ] && touch ~/.hushlogin
+
 export PATH="/usr/local/bin:/Users/gokul/Downloads/Apps/flutter/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -50,3 +53,6 @@ bindkey '^G' fzf-cd-widget           # Ctrl+G — fuzzy cd into directory
 
 # Starship prompt
 eval "$(starship init zsh)"
+
+# System info splash
+fastfetch
