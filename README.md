@@ -23,16 +23,18 @@ bash install.sh
 ## What it does
 
 1. Installs **Homebrew** (if missing)
-2. Installs CLI tools via brew: `starship`, `eza`, `fd`, `ripgrep`, `bat`, `fzf`, `zoxide`
-3. Installs **Ghostty** terminal (via cask)
-4. Clones zsh plugins to `~/.zsh/`:
+2. Installs CLI tools via brew: `starship`, `eza`, `fd`, `ripgrep`, `bat`, `fzf`, `zoxide`, `lazygit`, `yazi`, `ffmpeg`, `sevenzip`, `jq`, `poppler`, `resvg`, `imagemagick`
+3. Installs [`fuckoff`](https://github.com/Imgkl/fuckoff) via custom tap
+4. Installs **Ghostty** terminal (via cask)
+5. Installs `font-symbols-only-nerd-font` (cask)
+6. Clones zsh plugins to `~/.zsh/`:
    - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
    - [zsh-completions](https://github.com/zsh-users/zsh-completions)
    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-5. Symlinks `.zshrc`, `starship.toml`, and Ghostty config
-6. Backs up any existing configs to `.bak`
+7. Symlinks `.zshrc`, `starship.toml`, and Ghostty config
+8. Backs up any existing configs to `.bak`
 
 ## Font
 
