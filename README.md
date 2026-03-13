@@ -4,6 +4,8 @@ One script to set up my entire terminal environment on a fresh Mac.
 
 **Ghostty + Zsh + Starship + CLI tools** — all configured and ready to go.
 
+![Terminal Setup Screenshot](assets/screenshot.png)
+
 ## Quick Install
 
 ```bash
