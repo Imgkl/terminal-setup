@@ -91,6 +91,15 @@ else
     info "fuckoff installed"
 fi
 
+# Node.js (required for Claude Code)
+if command -v node &>/dev/null; then
+    info "Node.js already installed ($(node -v))"
+else
+    warn "Installing Node.js..."
+    brew install node
+    info "Node.js installed"
+fi
+
 # Claude Code
 if command -v claude &>/dev/null; then
     info "Claude Code already installed"
