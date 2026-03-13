@@ -31,7 +31,7 @@ else
 fi
 
 echo -e "\n${BOLD}╔══════════════════════════════════════╗${RESET}"
-echo -e "${BOLD}║     Terminal Setup — Mac Bootstrap    ║${RESET}"
+echo -e "${BOLD}║    Terminal Setup — Mac Bootstrap    ║${RESET}"
 echo -e "${BOLD}╚══════════════════════════════════════╝${RESET}\n"
 echo -e "Source: ${BOLD}$DOTFILES${RESET}\n"
 
@@ -181,7 +181,7 @@ fi
 # Done
 # --------------------------------------------------
 echo -e "\n${BOLD}╔══════════════════════════════════════╗${RESET}"
-echo -e "${BOLD}║          Setup complete!              ║${RESET}"
+echo -e "${BOLD}║           Setup complete!            ║${RESET}"
 echo -e "${BOLD}╚══════════════════════════════════════╝${RESET}\n"
 
 info "Open a new terminal window to see your setup"
