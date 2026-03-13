@@ -91,6 +91,15 @@ else
     info "fuckoff installed"
 fi
 
+# Claude Code
+if command -v claude &>/dev/null; then
+    info "Claude Code already installed"
+else
+    warn "Installing Claude Code..."
+    npm install -g @anthropic-ai/claude-code
+    info "Claude Code installed"
+fi
+
 # --------------------------------------------------
 # 3. Ghostty
 # --------------------------------------------------
