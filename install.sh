@@ -70,7 +70,7 @@ fi
 # 2. Brew packages
 # --------------------------------------------------
 step "Installing CLI tools via Homebrew..."
-BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide)
+BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit thefuck yazi ffmpeg sevenzip jq poppler resvg imagemagick)
 
 for pkg in "${BREW_PACKAGES[@]}"; do
     if brew list "$pkg" &>/dev/null; then
@@ -93,6 +93,22 @@ else
     brew install --cask ghostty
     info "Ghostty installed"
 fi
+
+# --------------------------------------------------
+# 3b. Cask packages
+# --------------------------------------------------
+step "Installing cask packages..."
+BREW_CASKS=(font-symbols-only-nerd-font)
+
+for cask in "${BREW_CASKS[@]}"; do
+    if brew list --cask "$cask" &>/dev/null; then
+        info "$cask already installed"
+    else
+        warn "Installing $cask..."
+        brew install --cask "$cask"
+        info "$cask installed"
+    fi
+done
 
 # --------------------------------------------------
 # 4. Zsh plugins
