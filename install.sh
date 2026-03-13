@@ -70,7 +70,7 @@ fi
 # 2. Brew packages
 # --------------------------------------------------
 step "Installing CLI tools via Homebrew..."
-BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit thefuck yazi ffmpeg sevenzip jq poppler resvg imagemagick)
+BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit yazi ffmpeg sevenzip jq poppler resvg imagemagick)
 
 for pkg in "${BREW_PACKAGES[@]}"; do
     if brew list "$pkg" &>/dev/null; then
@@ -81,6 +81,15 @@ for pkg in "${BREW_PACKAGES[@]}"; do
         info "$pkg installed"
     fi
 done
+
+# fuckoff (custom tap)
+if brew list fuckoff &>/dev/null; then
+    info "fuckoff already installed"
+else
+    warn "Installing fuckoff..."
+    brew tap Imgkl/fuckoff && brew install fuckoff
+    info "fuckoff installed"
+fi
 
 # --------------------------------------------------
 # 3. Ghostty
