@@ -56,3 +56,6 @@ eval "$(starship init zsh)"
 
 # System info splash
 fastfetch
+
+# Use Arc Browser for Flutter web development
+export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
