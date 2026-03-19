@@ -12,7 +12,7 @@ setopt SHARE_HISTORY          # share across sessions
 setopt HIST_IGNORE_ALL_DUPS   # no duplicate entries
 setopt HIST_REDUCE_BLANKS     # trim whitespace
 
-alias cy="claude --dangerously-skip-permissions"
+alias yolo="claude --dangerously-skip-permissions"
 alias cls="clear"
 mkcd() { mkdir -p "$1" && cd "$1"; }
 
