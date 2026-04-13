@@ -70,7 +70,7 @@ fi
 # 2. Brew packages
 # --------------------------------------------------
 step "Installing CLI tools via Homebrew..."
-BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit yazi ffmpeg sevenzip jq poppler resvg imagemagick fastfetch)
+BREW_PACKAGES=(starship eza fd ripgrep bat fzf zoxide lazygit yazi ffmpeg sevenzip jq poppler resvg imagemagick fastfetch gh mole rtk apktool jadx)
 
 for pkg in "${BREW_PACKAGES[@]}"; do
     if brew list "$pkg" &>/dev/null; then
@@ -125,7 +125,7 @@ fi
 # 3b. Cask packages
 # --------------------------------------------------
 step "Installing cask packages..."
-BREW_CASKS=(font-symbols-only-nerd-font)
+BREW_CASKS=(font-symbols-only-nerd-font ngrok)
 
 for cask in "${BREW_CASKS[@]}"; do
     if brew list --cask "$cask" &>/dev/null; then

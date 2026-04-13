@@ -10,28 +10,40 @@
   font-size = 14
   font-thicken = true
   adjust-cell-height = 2
+  font-feature = calt
+  font-feature = liga
+  font-feature = ss01
 
   # --- Theme and Colors ---
   # Catppuccin with automatic light/dark switching
   theme = Catppuccin Mocha
 
   # --- Window and Appearance ---
-  background-opacity = 0.9
-  background-blur-radius = 20
+  background-opacity = 0.85
+  background-blur-radius = 10
   macos-titlebar-style = transparent
   window-padding-x = 10
   window-padding-y = 8
+  window-padding-balance = true
+  window-padding-color = extend
   window-save-state = always
   window-theme = auto
+  confirm-close-surface = false
+  resize-overlay = after-first
+  resize-overlay-duration = 500ms
+
 
   # --- Cursor ---
   cursor-style = block_hollow
   cursor-style-blink = true
   cursor-opacity = 0.8
+  cursor-click-to-move = true
 
   # --- Mouse ---
   mouse-hide-while-typing = true
+  focus-follows-mouse = true
   copy-on-select = clipboard
+  clipboard-trim-trailing-spaces = true
 
   # --- Quick Terminal (Quake-style dropdown) ---
   # Activate with the global keybind configured below
@@ -47,6 +59,9 @@
 
   # --- Shell Integration ---
   shell-integration = detect
+
+  # --- Links ---
+  link-url = true
 
   # --- Keybindings ---
   # Tabs

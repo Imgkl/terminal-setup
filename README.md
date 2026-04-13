@@ -23,10 +23,10 @@ bash install.sh
 ## What it does
 
 1. Installs **Homebrew** (if missing)
-2. Installs CLI tools via brew: `starship`, `eza`, `fd`, `ripgrep`, `bat`, `fzf`, `zoxide`, `lazygit`, `yazi`, `ffmpeg`, `sevenzip`, `jq`, `poppler`, `resvg`, `imagemagick`, `fastfetch`
+2. Installs CLI tools via brew: `starship`, `eza`, `fd`, `ripgrep`, `bat`, `fzf`, `zoxide`, `lazygit`, `yazi`, `ffmpeg`, `sevenzip`, `jq`, `poppler`, `resvg`, `imagemagick`, `fastfetch`, `gh`, `mole`, `rtk`, `apktool`, `jadx`
 3. Installs [`fuckoff`](https://github.com/Imgkl/fuckoff) via custom tap
 4. Installs **Ghostty** terminal (via cask)
-5. Installs `font-symbols-only-nerd-font` (cask)
+5. Installs casks: `font-symbols-only-nerd-font`, `ngrok`
 6. Clones zsh plugins to `~/.zsh/`:
    - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)

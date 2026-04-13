@@ -12,7 +12,23 @@ setopt SHARE_HISTORY          # share across sessions
 setopt HIST_IGNORE_ALL_DUPS   # no duplicate entries
 setopt HIST_REDUCE_BLANKS     # trim whitespace
 
-alias yolo="claude --dangerously-skip-permissions"
+export CLAUDE_CODE_NO_FLICKER=1
+
+yolo() {
+  if [ -n "$1" ]; then
+    if [ -n "$2" ]; then
+      # Custom base branch: create worktree manually then launch claude in it
+      local repo_root="$(git rev-parse --show-toplevel)"
+      local worktree_dir="$repo_root/.claude/worktrees/$1"
+      git worktree add -b "worktree-$1" "$worktree_dir" "$2" && \
+        (cd "$worktree_dir" && claude --dangerously-skip-permissions)
+    else
+      claude --dangerously-skip-permissions -w "$1"
+    fi
+  else
+    claude --dangerously-skip-permissions
+  fi
+}
 alias cls="clear"
 mkcd() { mkdir -p "$1" && cd "$1"; }
 
@@ -59,3 +75,10 @@ fastfetch
 
 # Use Arc Browser for Flutter web development
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+
+# bun completions
+[ -s "/Users/gokul/.bun/_bun" ] && source "/Users/gokul/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
