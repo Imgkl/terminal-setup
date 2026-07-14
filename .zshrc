@@ -37,6 +37,7 @@ alias ls="eza"
 alias ll="eza -l --git"
 alias la="eza -la --git"
 alias lt="eza --tree --level=2"
+alias pogo="ssh -i ~/.ssh/pi5 pogo@192.168.0.190"
 
 # zsh-completions (adds fpath before compinit)
 fpath=(~/.zsh/zsh-completions/src $fpath)
@@ -82,3 +83,7 @@ export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Google Cloud SDK
+source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
+source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
